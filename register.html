@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comercio</title>
+    <link rel="stylesheet" href="css/styles-reset.css" />
+    <link rel="stylesheet" href="css/styles-login.css" />
+    <link rel="stylesheet" href="css/styles-input.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="section-login" id="registerSize">
+        <h1 id="Title">Comercio Global</h1>
+        <div>
+          <h3 id="createText">Crear una cuenta</h3>
+        </div>
+        <form class="login-form">
+          <input
+            id="registerMargin"
+            class="input-text"
+            type="text"
+            name="email"
+            placeholder="Correo Electronico"
+            required
+          />
+          <input
+            id="registerMargin"
+            class="input-text"
+            type="text"
+            name="username"
+            placeholder="Nombre de Usuario"
+            required
+          />
+          <input
+            id="registerMargin"
+            class="input-text"
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+          <input
+            id="registerMargin"
+            class="input-text"
+            type="text"
+            name="name"
+            placeholder="Nombre"
+            required
+          />
+          <input
+            id="registerMargin"
+            class="input-text"
+            type="text"
+            name="last-name"
+            placeholder="Apellido"
+            required
+          />
+          <select name="type" class="input-text">
+            <option value="comprador" selected>Comprador</option>
+            <option value="vendedor">Vendedor</option>
+          </select>
+          <input class="button" type="submit" value="Registrarme" id="signUp" />
+          <input type="hidden" name="id" />
+        </form>
+        <div>
+          <h5 id="noaccount">¿Ya tienes una cuenta?</h5>
+          <button class="button" id="logIn">
+            <b>Iniciar Sesión</b>
+          </button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
+<script src="js/modules/register.js" type="module"></script>

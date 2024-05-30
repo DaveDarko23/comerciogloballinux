@@ -1,0 +1,55 @@
+body{
+  width: 100%;
+  height: 100vh;;
+  background-image: url("../img/login-background.jpg");
+  background-size: 100% 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+.section-login{
+  color: aliceblue;
+  margin: auto;
+  height: 80vh;
+  background-color: #2f9ea899;
+  border-radius: 2rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#noaccount {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.container {
+  margin: 5rem;
+}
+
+#Title {
+  font-size: 2rem;
+}
+
+#registerSize {
+  width: 40vw;
+}
+
+#createText {
+  margin-bottom: 0.4rem;
+}

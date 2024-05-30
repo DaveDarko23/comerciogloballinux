@@ -1,0 +1,74 @@
+create table usuario (
+  PK_Usuario int PRIMARY KEY AUTO_INCREMENT,
+  correo varchar (50) CHARACTER SET utf8,
+  username varchar (50) CHARACTER SET utf8,
+  password varchar (50),
+  nombre varchar (50) CHARACTER SET utf8,
+  apellido varchar (50) CHARACTER SET utf8
+);
+
+create table vendedor (
+  PK_Administrador int PRIMARY KEY AUTO_INCREMENT,
+  FK_Usuario int,
+  FOREIGN KEY (FK_Usuario) REFERENCES usuario(PK_Usuario)
+);
+
+create table entidad (
+  PK_Estado int PRIMARY KEY AUTO_INCREMENT,
+  nombre varchar (20)
+);
+
+create table comprador (
+  PK_Comprador int PRIMARY KEY AUTO_INCREMENT,
+  FK_Usuario int,
+  FK_Estado int,
+  domicilio varchar (200) CHARACTER SET utf8,
+  FOREIGN KEY (FK_Usuario) REFERENCES usuario(PK_Usuario),
+  FOREIGN KEY (FK_Estado) REFERENCES entidad(PK_Estado)
+);
+
+create table producto (
+  PK_Producto int PRIMARY KEY AUTO_INCREMENT,
+  imagen varchar (100),
+  product varchar (100) CHARACTER SET utf8,
+  descripcion varchar (1000) CHARACTER SET utf8,
+  precio float,
+  stock int,
+  categoria varchar (50),
+  FK_Vendedor int,
+  FOREIGN KEY (FK_Vendedor) REFERENCES vendedor(PK_Administrador)
+);
+
+create table carrito (
+  PK_Carrito int PRIMARY KEY AUTO_INCREMENT,
+  cantidad int default 1,
+  status tinyint default 0,
+  pdf varchar(100),
+  FK_Usuario int, 
+  FK_Producto int,
+  FOREIGN KEY (FK_Usuario) REFERENCES comprador(PK_Comprador),
+  FOREIGN KEY (FK_Producto) REFERENCES producto(PK_Producto)
+);
+
+create table Deseos (
+  PK_Deseos int PRIMARY KEY AUTO_INCREMENT,
+  FK_Usuario int, 
+  FK_Producto int,
+  FOREIGN KEY (FK_Usuario) REFERENCES comprador(PK_Comprador),
+  FOREIGN KEY (FK_Producto) REFERENCES producto(PK_Producto)
+);
+
+ALTER TABLE Producto CHANGE COLUMN PK_Imagen PK_Producto int PRIMARY KEY AUTO_INCREMENT;
+
+ALTER TABLE carrito CHANGEL COLUMN cantidad int default 0;
+
+ALTER TABLE carrito CHANGE COLUMN Status status tinyint default 0;
+
+ALTER TABLE producto CHANGE COLUMN imagen imagen varchar (100);
+  ALTER TABLE producto CHANGE COLUMN product product varchar (100) CHARACTER SET utf8;
+  ALTER TABLE producto CHANGE COLUMN descripcion descripcion varchar (100) CHARACTER SET utf8;
+
+
+ALTER TABLE producto ADD categoria varchar (50) after stock;
+
+UPDATE producto SET categoria = "Tecnologia";

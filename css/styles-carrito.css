@@ -1,0 +1,46 @@
+.section-buy{
+  padding: 2vh;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+
+.info-buy{
+  width: 70%;
+}
+
+.button-buy{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.estados-form{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  background-color: #258d29;
+}
+
+.button-delete{
+  background-color: #C70020;
+  padding: .5rem;
+  border-style: none;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+
+.product-buttons{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
